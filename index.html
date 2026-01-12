@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
-    <title>Kindle天气台历</title>
+    <title>Kindle Weather Calendar</title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
     <meta http-equiv="pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
@@ -81,9 +81,9 @@
         function getNISTTimestamp() {
             const xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function () {
-                if (xhr.readyState === 4) { // 请求完成
+                if (xhr.readyState === 4) { // Request completed
                     requestEndTime = (new Date()).getTime();
-                    if (xhr.status === 200) { // 请求成功
+                    if (xhr.status === 200) { // Request successful
                         const responseText = xhr.responseText;
                         const timeMatch = responseText.match(/time="(\d+)"/);
                         if (timeMatch && timeMatch[1]) {
@@ -92,16 +92,16 @@
                             net_OneWTime = parseInt(net_DelyTime / 2);
                             net_ServerArrivalTime = requestStartTime + net_OneWTime;
                             DT_Times = serverTimestamp - net_ServerArrivalTime;
-                            console.log('请求时间:', requestStartTime);
-                            console.log('响应时间:', requestEndTime);
-                            console.log('服务器时间戳:', serverTimestamp);
-                            console.log('时间误差:', DT_Times);
+                            console.log('Request time:', requestStartTime);
+                            console.log('Response time:', requestEndTime);
+                            console.log('Server timestamp:', serverTimestamp);
+                            console.log('Time offset:', DT_Times);
 
                         } else {
-                            console.error('无法从响应中提取时间戳');
+                            console.error('Unable to extract timestamp from response');
                         }
                     } else {
-                        console.error('请求失败。状态码:', xhr.status);
+                        console.error('Request failed. Status code:', xhr.status);
                     }
                 }
             };
@@ -113,11 +113,11 @@
             Time_API3 = "https://time.is/";
             */
 
-            // 发送请求
+            // Send request
             try {
                 xhr.send();
             } catch (error) {
-                console.error('发送请求时出错:', error);
+                console.error('Error sending request:', error);
             }
         }
 
@@ -263,7 +263,7 @@
 
             lastUpdate = document.getElementById("lastUpdate");
             lastUpdate.innerHTML = momentWithCorrectUtcOffset(new Date(new Date().getTime() + DT_Times)).format(timeFormat);
-            sun.innerHTML = momentWithCorrectUtcOffset(new Date(new Date().getTime() + DT_Times)).format("第WW周") + "&nbsp;&nbsp;" + sunrise.format(timeFormat) + "<i class='wi wi-sunrise'></i>&nbsp;&nbsp;&nbsp;" + sunset.format(timeFormat) + "<i class='wi wi-sunset'></i> " + "&nbsp;&nbsp;" + momentWithCorrectUtcOffset(new Date(new Date().getTime() + DT_Times)).format("dddd");
+            sun.innerHTML = momentWithCorrectUtcOffset(new Date(new Date().getTime() + DT_Times)).format("WW") + "&nbsp;&nbsp;" + sunrise.format(timeFormat) + "<i class='wi wi-sunrise'></i>&nbsp;&nbsp;&nbsp;" + sunset.format(timeFormat) + "<i class='wi wi-sunset'></i> " + "&nbsp;&nbsp;" + momentWithCorrectUtcOffset(new Date(new Date().getTime() + DT_Times)).format("dddd");
             //  alert(data.name);
             setNightMode();
             setMoonIconsRotation(data.coord.lat);
@@ -428,7 +428,7 @@
             city.addEventListener('click', function (event) {
                 event.preventDefault();
                 // window.location.href = window.location.href.replace("/index.html", "/config.html");
-                window.location.href = "config.html"; // 直接跳转到配置页面
+                window.location.href = "config.html"; // Directly jump to configuration page
                 return false;
             });
             description.addEventListener('click', function (event) {
