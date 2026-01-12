@@ -23,7 +23,7 @@ Custom settings: Click the "city" on the page to enter custom parameter settings
 
 Backup sites:
 
-Test site: https://github.com/pladombrowski/Kindle_Weather
+Test site: https://pladombrowski.github.io/Kindle_Weather
 
 Test site: https://pladombrowski.github.io/Kindle_Weather/config.html 
 
