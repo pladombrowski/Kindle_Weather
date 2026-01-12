@@ -5,7 +5,7 @@
 Kindle WeatherCN, Weather Calendar System
 Principle: Built-in browser accesses H5 page
 
-![Image text](https://raw.githubusercontent.com/0111/Kindle_WeatherCN/main/00-JustSoso.jpg)
+![Image text](https://raw.githubusercontent.com/pladombrowski/Kindle_Weather/main/00-JustSoso.jpg)
 
 # Important First Step: Disable Screen Sleep Mode
 Click the magnifying glass, enter in the search box: ~ds and press Enter
@@ -29,7 +29,7 @@ Test site: https://0111.github.io/Kindle_WeatherCN/config.html
 
 Chrome simulates 600*700 display effect (roughly consistent with Kindle 7th)
 
-![Image text](https://raw.githubusercontent.com/0111/Kindle_WeatherCN/main/05-Chome_WebView.png)
+![Image text](https://raw.githubusercontent.com/pladombrowski/Kindle_Weather/main/05-Chome_WebView.png)
 
 
 # Method Two: Self-Hosted Server
@@ -44,7 +44,7 @@ Chrome simulates 600*700 display effect (roughly consistent with Kindle 7th)
 Access the page http://website/config.html 
 
 
-![Image text](https://raw.githubusercontent.com/0111/Kindle_WeatherCN/main/04-Setting_City.png)
+![Image text](https://raw.githubusercontent.com/pladombrowski/Kindle_Weather/main/04-Setting_City.png)
 
 After correct configuration, select "Apply Configuration"
 
