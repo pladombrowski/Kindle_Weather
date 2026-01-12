@@ -1,4 +1,7 @@
 # Kindle_WeatherCN
+
+> **Note:** This is a fork of the original repository [https://github.com/0111/Kindle_WeatherCN](https://github.com/0111/Kindle_WeatherCN) translated to Western English. All Chinese content has been translated to English, including user interface elements, comments, console messages, and documentation.
+
 Kindle WeatherCN, Weather Calendar System
 Principle: Built-in browser accesses H5 page
 
